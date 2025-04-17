@@ -1,0 +1,11 @@
+[project]
+name = "otvet"
+author = "Polshkrev"
+
+[project.version]
+minor = 1
+
+[commands]
+script = ["build\\build"]
+build = ["go", "build", "-o", "bin\\otvet.exe", "command\\otvet.go"]
+run = ["bin\\otvet.exe"]
