@@ -120,6 +120,6 @@ func StatusText(code StatusCode) (string, *gopolutils.Exception) {
 	case StatusNetworkAuthenticationRequired:
 		return "Network Authentication Required", nil
 	default:
-		return "", gopolutils.NewNamedException("ValueError", fmt.Sprintf("Can not determine string value of status code: %d.\n", code))
+		return "", gopolutils.NewNamedException(gopolutils.ValueError, fmt.Sprintf("Can not determine string value of status code: %d.\n", code))
 	}
 }
