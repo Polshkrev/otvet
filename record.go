@@ -7,6 +7,7 @@ type Record[Type any] struct {
 }
 
 // Construct a new record.
+// Returns a new record with a given status code and a given payload of data.
 func NewRecord[Type any](code StatusCode, data Type) *Record[Type] {
 	var record *Record[Type] = new(Record[Type])
 	record.Code = code

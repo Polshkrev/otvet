@@ -50,8 +50,8 @@ const (
 
 // Determine the string value representation of a given status code.
 // Returns the string representation for the given status code.
-// If the string representation of the given status code can not be determined, a ValueError is returned with an empty string.
-func StatusText(code StatusCode) (string, *gopolutils.Exception) {
+// If the string representation of the given status code can not be determined, a [gopolutils.ValueError] is returned with an empty string.
+func StatusToString(code StatusCode) (string, *gopolutils.Exception) {
 	switch code {
 	case StatusOK:
 		return "OK", nil
